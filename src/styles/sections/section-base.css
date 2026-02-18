@@ -1,0 +1,85 @@
+section {
+    grid-area: section;
+    padding: 2rem 5rem;
+    height: 100vh;
+    grid-template-rows: auto 1fr;
+    grid-template-columns: 1fr 1fr;
+    align-items: start;
+    gap: 1.25rem;
+    z-index: 0;
+    display: flex;
+    flex-direction: column;
+    background-color: #fdfbf7;
+    background-image:
+        linear-gradient(rgba(180, 160, 120, 0.15) 0.05rem, transparent 0.05rem),
+        linear-gradient(90deg, rgba(180, 160, 120, 0.15) 0.05rem, transparent 0.05rem);
+    background-size: 1.5625rem 1.5625rem;
+    background-attachment: fixed;
+}
+
+.section.active.waiting {
+    opacity: 0;
+    transform: translateY(1.875rem);
+    pointer-events: none;
+}
+
+section.active {
+    z-index: 1;
+    opacity: 1;
+    transform: translateY(0);
+    transition: transform 0.6s cubic-bezier(0.23, 1, 0.32, 1),
+        opacity 0.6s ease;
+    pointer-events: auto;
+}
+
+.head {
+    padding-left: 3.5rem;
+}
+
+.head .subtitle {
+    font-family: "WuWa Lahai-Roi";
+    font-size: 2.5rem;
+}
+
+.work-list,
+.post-list {
+    height: 100%;
+    overflow-y: auto;
+    scrollbar-width: none;
+    position: relative;
+    padding: 1rem 3.75rem;
+    background:
+        linear-gradient(var(--color-stroke-purple) 0 0) 30px 0 / 4px 100% no-repeat;
+}
+
+
+.work-item,
+.post-item {
+    position: relative;
+    margin-bottom: 40px;
+    padding: 16px;
+    box-shadow:
+        0 -2px 0 0 var(--color-stroke-purple),
+        0 2px 0 0 var(--color-stroke-purple),
+        -2px 0 0 0 var(--color-stroke-purple),
+        2px 0 0 0 var(--color-stroke-purple), 
+        6px 6px 0 0 var(--color-bg-purple);
+
+}
+
+.work-item::before,
+.post-item::before {
+    content: "";
+    position: absolute;
+    left: -34px;
+    top: 10px;
+    width: 12px;
+    height: 12px;
+    background: #db7a9e;
+    box-shadow:
+        0 -2px 0 0 var(--color-stroke-purple),
+        0 2px 0 0 var(--color-stroke-purple),
+        -2px 0 0 0 var(--color-stroke-purple),
+        2px 0 0 0 var(--color-stroke-purple);
+
+}

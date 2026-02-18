@@ -1,0 +1,26 @@
+.work-banner img {
+    width: 60%;
+    height: auto;
+    border-top-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+
+.work-item .work-main {
+    display: flex;
+    gap: 1rem;
+}
+
+.work-item .work-cover {
+    width: 15rem;
+}
+
+.work-item .work-meta {
+    display: grid;
+    align-content: center;
+}
+
+.work-item .work-types {
+    font-size: .9rem;
+    font-style: italic;
+}

@@ -1,0 +1,57 @@
+#loader {
+    grid-area: section;
+    z-index: 4;
+    inset: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #fdfbf7;
+    background-image:
+        linear-gradient(rgba(180, 160, 120, 0.15) 0.05rem, transparent 0.05rem),
+        linear-gradient(90deg, rgba(180, 160, 120, 0.15) 0.05rem, transparent 0.05rem);
+    background-size: 1.5625rem 1.5625rem;
+    background-attachment: fixed;
+}
+
+#loader #loading-seal {
+    order: 1;
+    transform: scale(0.5);
+    margin-top: -4.6875rem;
+}
+
+#loader #loading-text {
+    order: 2;
+    transform: scale(0.7);
+    margin-top: -9.375rem;
+    margin-bottom: -4.375rem;
+}
+
+.progressbar {
+    order: 3;
+    position: relative;
+    width: 18.75rem;
+    height: 1.875rem;
+}
+
+.progressbar .empty {
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+#mask {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 0;
+    overflow: hidden;
+}
+
+.full {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 18.75rem;
+}

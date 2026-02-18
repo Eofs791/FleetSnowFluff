@@ -1,0 +1,36 @@
+/* global */
+@import './common/layout.css';
+@import './common/base.css';
+
+/* sections */
+@import './sections/section-base.css';
+@import './sections/info.css';
+@import './sections/work.css';
+@import './sections/post.css';
+@import './sections/chat.css';
+
+/* components */
+@import './components/aside.css';
+@import './components/loader.css';
+
+@font-face {
+    font-family: "WuWa Lahai-Roi";
+    src: url("@/assets/fonts/WuWa Lahai-Roi Regular.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Dotted Songti Square";
+    src: url("@/assets/fonts/DottedSongtiSquareRegular.otf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+  font-family: "FixEllipsis";
+  src: local('Arial');
+  unicode-range: U+2026;
+}

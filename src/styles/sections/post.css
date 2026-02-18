@@ -1,0 +1,27 @@
+.post-banner img {
+    border-top-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+
+.post-item .post-time {
+    font-size: .5rem;
+    font-style: italic;
+
+}
+
+.post-item .post-title {
+    margin: 0;
+}
+
+.post-item .post-text {
+    font-size: .9rem;
+}
+
+.post-item .post-images img {
+    width: 20%;
+    aspect-ratio: 1 / 1;
+    margin: 0 .1rem;
+    object-fit: cover;
+    object-position: center;
+}

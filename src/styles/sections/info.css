@@ -1,0 +1,37 @@
+#info {
+    justify-content: center;
+}
+
+.main-title {
+    font-family: "WuWa Lahai-Roi";
+    font-size: 5rem;
+    color: #f095da;
+}
+
+/* social links*/
+.social-icons a {
+    display: inline-block;
+    width: 2rem;
+    height: 2rem;
+    background-size: 100% 100%;
+}
+
+.social-icons #kurobbs {
+    background-image: url(@/assets/icons/kjq-icon.png);
+}
+
+.social-icons #bili {
+    background-image: url(@/assets/icons/bilibili-icon.png);
+}
+
+.social-icons #weibo {
+    background-image: url(@/assets/icons/wb-icon.png);
+}
+
+.social-icons #facebook {
+    background-image: url(@/assets/icons/fb-icon.png);
+}
+
+.social-icons #netease {
+    background-image: url(@/assets/icons/netease-icon.png);
+}
