@@ -3,24 +3,31 @@ import { loaderTrigger } from "./loader";
 let isLocked = false;
 let sections;
 let routes;
-const basePath = "/FleetSnowFluff/";
 
 function getIndex() {
-    const currentPath = window.location.pathname.slice(basePath.length);
-    let index = routes.findIndex(route => route.path === currentPath);
+    const params = new URLSearchParams(window.location.search);
+    const page = params.get("page") || "";
+
+    let index = routes.findIndex(route => route.path === page);
     return index === -1 ? 0 : index;
 }
 
 async function updateSectionDOM(targetIndex, showLoader = false) {
     const targetRoute = routes[targetIndex];
     routes.forEach((route, index) => {
+        const scrollArea = route.element.querySelector('.scroll-area')
+        if (scrollArea) {
+            scrollArea.scrollTop = 0;
+        }
+
         const isTarget = index === targetIndex;
         route.element.classList.toggle("active", isTarget);
         route.element.classList.toggle("waiting", isTarget);
 
         if (isTarget) {
-            const finalPath = `${basePath}${route.path}`;
-            history.pushState(null, "", finalPath);
+            const page = route.path;
+            const url = page ? `?page=${page}` : location.pathname;
+            history.pushState(null, "", url);
         }
 
     });
@@ -55,11 +62,7 @@ function switchSection(direction) {
 
 function canScroll(element) {
     while (element && element.tagName.toLowerCase() !== 'section') {
-        const style = window.getComputedStyle(element);
-        const overflowY = style.getPropertyValue('overflow-y');
-        const isScrollableStyle = overflowY === 'auto' || overflowY === 'scroll';
-
-        if (isScrollableStyle) {
+        if (element.classList.contains("scroll-area") || element.matches("aside")) {
             return false;
         }
 
@@ -94,7 +97,7 @@ export function initRouter() {
         updateSectionDOM(getIndex(), true);
     });
 
-    const navLinks = document.querySelectorAll("aside a");
+    const navLinks = document.querySelectorAll(".section-btn");
     navLinks.forEach((link, index) => {
         link.addEventListener('click', (e) => {
             e.preventDefault();

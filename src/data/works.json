@@ -6,7 +6,7 @@
     "type": [
       "SINGLE"
     ],
-    "timestamp": "2023-12-15",
+    "timestamp": 1767235200,
     "cover": "./images/works/work_001.jpg",
     "desc": "",
     "tracks": [
@@ -26,9 +26,9 @@
   {
     "id": "work_002",
     "category": "PV",
-    "title": "飞行雪绒EP——《靛青宇宙》",
-    "type": [],
-    "timestamp": "2024-02-14",
+    "title": "靛青宇宙",
+    "type": ["EP"],
+    "timestamp": 1768622432,
     "cover": "./images/works/work_002.jpg",
     "desc": "思绪划过流星的刹那，光芒依旧璀璨闪耀。",
     "tracks": [],
@@ -37,9 +37,9 @@
   {
     "id": "work_003",
     "category": "PV",
-    "title": "飞行雪绒EP——《碎花》",
-    "type": [],
-    "timestamp": "2024-02-14",
+    "title": "碎花",
+    "type": ["EP"],
+    "timestamp": 1768644004,
     "cover": "./images/works/work_003.jpg",
     "desc": "",
     "tracks": [],
@@ -48,9 +48,9 @@
   {
     "id": "work_004",
     "category": "PV",
-    "title": "先约电台EP3.1——爱弥斯《纸飞机》",
-    "type": [],
-    "timestamp": "2024-02-14",
+    "title": "先约电台EP3.1——《纸飞机》",
+    "type": ["EP"],
+    "timestamp": 1768707003,
     "cover": "./images/works/work_004.jpg",
     "desc": "",
     "tracks": [],
@@ -63,7 +63,7 @@
     "type": [
       "EP"
     ],
-    "timestamp": "2024-02-14",
+    "timestamp": 1768707003,
     "cover": "./images/works/work_005.jpg",
     "desc": "先约电台EP3.1——爱弥斯《纸飞机》与同名 EP 专辑《飞行雪绒》\n\n《鸣潮》先约电台EP3.1——爱弥斯《纸飞机》\n纵使终将飞向坠落的命运，仍用那星炬的火光，照亮宇宙。\n\n飞行雪绒EP——《靛青宇宙》\n思绪划过流星的刹那，光芒依旧璀璨闪耀。飞行雪绒EP——《碎花》\n\n滴答，花瓣飘落——忽然记起那些如花朵般绽放的时刻。",
     "tracks": [
@@ -103,7 +103,7 @@
         "id": "EP1",
         "category": "PV",
         "title": "飞行雪绒EP——《靛青宇宙》",
-        "timestamp": "2024-02-14",
+        "timestamp": 1768622432,
         "cover": "./images/works/work_002.jpg",
         "desc": "思绪划过流星的刹那，光芒依旧璀璨闪耀。",
         "video": "./videos/IndigoUniverse.mp4"
@@ -112,7 +112,7 @@
         "id": "EP2",
         "category": "PV",
         "title": "飞行雪绒EP——《碎花》",
-        "timestamp": "2024-02-14",
+        "timestamp": 1768644004,
         "cover": "./images/works/work_003.jpg",
         "desc": "滴答，花瓣飘落——忽然记起那些如花朵般绽放的时刻。",
         "video": "./videos/FallenPetals.mp4"
@@ -121,7 +121,7 @@
         "id": "EP3",
         "category": "PV",
         "title": "先约电台EP3.1——爱弥斯《纸飞机》",
-        "timestamp": "2024-02-14",
+        "timestamp": 1768707003,
         "cover": "./images/works/work_004.jpg",
         "desc": "纵使终将飞向坠落的命运，仍用那星炬的火光，照亮宇宙。",
         "video": "./videos/PaperPlane.mp4"
@@ -136,7 +136,7 @@
       "STUDIO",
       "COMPILATION"
     ],
-    "timestamp": "2024-03-10",
+    "timestamp": 1764902400,
     "cover": "./images/works/work_006.jpg",
     "desc": "先约电台——星炬毕业纪念曲《星炬不熄》\n毕业快乐。向着远方……飞吧。",
     "tracks": [
@@ -171,7 +171,7 @@
         "id": "LIVE",
         "category": "LIVE",
         "title": "祝福",
-        "timestamp": "2024-02-14",
+        "timestamp": 1764902400,
         "cover": "./images/works/UnwaveringStartorch.jpg",
         "desc": "毕业快乐！",
         "video": "./videos/UnwaveringStartorch.mp4"
@@ -185,7 +185,7 @@
     "type": [
       "STUDIO"
     ],
-    "timestamp": "2024-05-20",
+    "timestamp": 1765075200,
     "cover": "./images/works/work_007.jpg",
     "desc": "本专辑与他人合作，更多曲目请参考官方发行记录。",
     "tracks": [
@@ -210,7 +210,7 @@
       "STUDIO",
       "COMPILATION"
     ],
-    "timestamp": "2024-06-01",
+    "timestamp": 1765248000,
     "cover": "./images/works/work_008.jpg",
     "desc": "《鸣潮》——爱弥斯三部曲《星轨消逝之夜》\n\n星轨消逝之夜一 ——《小小奇迹》\n星轨消逝之夜二 ——《远航星的告别》\n星轨消逝之夜三 ——《那颗星梦见的春日》\n\n本专辑与他人合作，更多曲目请参考官方发行记录。",
     "tracks": [
@@ -244,7 +244,7 @@
     "type": [
       "STUDIO"
     ],
-    "timestamp": "2024-08-01",
+    "timestamp": 1770463800,
     "cover": "./images/works/work_009.jpg",
     "desc": "先约电台特辑——《飞行雪绒的练习时间》\n随着时间变化，这些歌也不再完全属于我，而是变成了一段维系人们缘分的旋律。",
     "tracks": [
@@ -259,7 +259,7 @@
         "id": "POST",
         "category": "REEL",
         "title": "飞行雪绒的回忆 ｜ 练习时间",
-        "timestamp": "1770463800",
+        "timestamp": 1770463800,
         "cover": "./images/posts/1770463800.jpg",
         "desc": "随着时间变化，这些歌也不再完全属于我，而是变成了一段维系人们缘分的旋律。",
         "video": "./videos/UnwaveringStartorch.mp4"

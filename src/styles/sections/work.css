@@ -6,21 +6,28 @@
     border-bottom-right-radius: 20px;
 }
 
-.work-item .work-main {
+.work-item {
     display: flex;
+    flex-direction: row;
     gap: 1rem;
 }
 
+@media (max-width: 768px) {
+    .work-item {
+        flex-direction: column;
+    }
+}
+
 .work-item .work-cover {
-    width: 15rem;
+    flex-shrink: 0;
+    width: 10rem;
 }
 
 .work-item .work-meta {
-    display: grid;
     align-content: center;
 }
 
-.work-item .work-types {
+.work-item .work-tag {
     font-size: .9rem;
     font-style: italic;
 }

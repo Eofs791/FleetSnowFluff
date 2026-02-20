@@ -17,6 +17,9 @@ document.addEventListener("DOMContentLoaded", () => {
     init({
         el: '#waline',
         serverURL: 'https://waline-blush-ten.vercel.app/',
+        emoji: [
+            '/snowEmoji/'
+        ]
     });
     initRouter();
     initPlayer();

@@ -7,7 +7,6 @@
     <link rel="icon" href="/favicon.ico">
     <link rel="stylesheet" href="./src/styles/main.css" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/remixicon@4.9.0/fonts/remixicon.css" />
-    <link rel="stylesheet" href="https://unpkg.com/@waline/client@v3/dist/waline.css" />
     <script type="module" src="./src/main.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
@@ -34,31 +33,31 @@
         <div class="aside-head">
             <button class="aside-btn"><img src="/heart-pixel.png"></button>
         </div>
-        <div class="aside-main"> 
-            <a href="#info">
-                <div class="avatar-1">
-                    <div class="avatar-2">
-                        <div class="avatar-3">
-                            <img src="/images/avatar.gif" class="avatar-gif">
-                        </div>
-                    </div>
+        <div class="aside-main">
+            <div class="avatar-1">
+                <div class="avatar-2">
+                    <div class="avatar-3"></div>
                 </div>
-            </a>
-            <nav>
-                <a href="#work">Work</a>
-                <a href="#post">Post</a>
-                <a href="#chat">Chat Board</a>
-            </nav>
+                <img src="/images/avatar.gif" class="avatar-gif">
+            </div>
             <div class="player">
                 <div class="player-head">
                     <span id="title-text"></span>
                 </div>
                 <div class="control">
-                    <img src="/images/next.png" id="pre-btn">
-                    <img src="/images/play.png" id="play-btn">
-                    <img src="/images/next.png" id="next-btn">
+                    <button id="pre-btn"><img src="/images/next.png"></button>
+                    <button id="play-btn"><img src="/images/play.png"></button>
+                    <button id="next-btn"><img src="/images/next.png"></button>
                 </div>
             </div>
+            <nav>
+                <a href="#info" class="section-btn" style="--i: 1">Info</a>
+                <a href="#work" class="section-btn" style="--i: 2">Work</a>
+                <a href="#post" class="section-btn" style="--i: 3">Post</a>
+                <a href="#chat" class="section-btn" style="--i: 4">Chat Board</a>
+                <a href="javascript:void(0)" id="playlist-btn" style="--i: 5">Playlist</a>
+            </nav>
+            <div class="playlist scroll-area" id="playlist"></div>
         </div>
     </aside>
 
@@ -85,8 +84,7 @@
             <span class="subtitle">WORKS</span>
             <span class="description">作品发布</span>
         </div>
-        <div class="work-banner" id="work-banner"></div>
-        <div class="work-list" id="work-list"></div>
+        <div class="work-list scroll-area" id="work-list"></div>
     </section>
 
     <section id="post">
@@ -94,9 +92,7 @@
             <span class="subtitle">POSTS</span>
             <span class="description">动态</span>
         </div>
-
-        <div class="post-banner" id="post-banner"></div>
-        <div class="post-list" id="post-list"></div>
+        <div class="post-list scroll-area" id="post-list"></div>
     </section>
 
     <section id="chat">
@@ -104,7 +100,7 @@
             <span class="subtitle">CHATS</span>
             <span class="description">留言板</span>
         </div>
-        <div id="waline"></div>
+        <div class="scroll-area" id="waline"></div>
         </div>
     </section>
 </body>

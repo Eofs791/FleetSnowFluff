@@ -34,6 +34,7 @@ body {
 
 * {
     box-sizing: border-box;
+    scrollbar-width: none;
 }
 
 section img,
@@ -49,6 +50,7 @@ a,
 a:visited {
     color: inherit;
     text-decoration: none;
+    cursor: pointer;
 }
 
 button {

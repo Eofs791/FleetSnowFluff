@@ -30,7 +30,6 @@ video {
     max-height: 80vh;
 }
 
-
 .modal {
     background-color: rgba(255, 255, 255, 0.85);
     backdrop-filter: blur(0.3125rem);
@@ -81,7 +80,7 @@ video {
 
 .modal .modal-title {
     font-family: "WuWa Lahai-Roi";
-    padding: .5rem 1rem;
+    padding: 1rem;
     margin: 0;
     color: #db7a9e;
 }
@@ -97,10 +96,9 @@ video {
 }
 
 .modal .modal-main {
-    margin: 2rem;
+    margin: 1rem;
     flex-grow: 1;
     overflow-y: auto;
-    scrollbar-width: none;
 }
 
 .modal .modal-main hr {
@@ -108,13 +106,21 @@ video {
 }
 
 .modal .media {
-    max-height: 70vh;
-    padding: 1rem;
     display: flex;
+    flex-direction: column;
     justify-content: center;
+    padding-top: 1rem;
+    gap: 2rem;
 }
 
 .modal .media video {
+    width: 100%;
+    height: 100%;
+    max-height: 70vh;
+    object-fit: contain;
+}
+
+.modal .media img {
     width: 100%;
     height: 100%;
     max-height: 70vh;
@@ -139,6 +145,7 @@ video {
     font-size: 1.6rem;
     font-weight: bold;
     margin-top: 1rem;
+    margin-left: 1rem;
     margin-right: 1rem;
     padding: .2rem .9rem;
     outline: .125rem solid #db7a9e;
@@ -188,19 +195,34 @@ video {
     font-size: 1.1rem;
 }
 
-.detail-track button {
-    font-family: "WuWa Lahai-Roi";
-    margin: 0;
-    padding: 0;
-    border: 0;
-    outline: none;
-    background: none;
-}
-
 .track-item {
     margin: 1rem;
     display: flex;
     align-items: center;
+    cursor: pointer;
+}
+
+.track-item:hover {
+    font-weight: bold;
+}
+
+.track-item::before {
+    content: '>';
+    position: absolute;
+    left: 0.5rem;
+    opacity: 0;
+    transition: all 0.3s ease;
+    transform: translateX(-5px);
+}
+
+.track-item:hover::before {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.play-btn {
+    all: unset;
+    font-family: "WuWa Lahai-Roi";
 }
 
 .track-title {
@@ -209,4 +231,18 @@ video {
 
 .track-duration {
     margin-left: auto;
+}
+
+@media (max-width: 768px) {
+    .modal {
+        max-width: 95vw;
+    }
+
+    .modal .modal-main h1 {
+        font-size: calc(100vw / 15);
+    }
+
+    .modal .modal-main {
+        margin: .5rem;
+    }
 }

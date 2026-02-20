@@ -2,7 +2,28 @@ import { trackList } from "../data/tracks";
 
 let currentIndex = 0;
 let isPlaying = false;
+let showList = false;
 const audio = new Audio();
+
+function renderPlaylist() {
+    const playlist = document.getElementById("playlist");
+
+    trackList.forEach((track, index) => {
+        const item = document.createElement("a");
+        item.className = "tracklist-item";
+        item.style.setProperty('--i', index);
+        item.innerHTML = `
+            <span class="tracklist-title">${track.title}</span>
+            <span class="tracklist-duration">${track.duration}</span>
+        `;
+
+        item.addEventListener("click", () => {
+            selectTrack(track.id);
+        });
+
+        playlist.appendChild(item);
+    });
+}
 
 function loadTrack(index) {
     const track = trackList[index];
@@ -46,12 +67,21 @@ function nextTrack() {
     playTrack();
 }
 
+export function selectTrack(targetId) {
+    currentIndex = trackList.findIndex(track => track.id === targetId);
+    loadTrack(currentIndex);
+    playTrack();
+}
+
 export function initPlayer() {
     loadTrack(currentIndex);
+    renderPlaylist();
 
     const playBtn = document.getElementById("play-btn");
     const preBtn = document.getElementById("pre-btn");
     const nextBtn = document.getElementById("next-btn");
+    const listBtn = document.getElementById("playlist-btn");
+    const playlist = document.getElementById("playlist");
 
     playBtn.addEventListener('click', () => {
         if (isPlaying) {
@@ -60,9 +90,22 @@ export function initPlayer() {
             playTrack();
         }
     });
-
     preBtn.addEventListener('click', preTrack);
     nextBtn.addEventListener('click', nextTrack);
+
+    listBtn.addEventListener('click', () => {
+        showList = !showList;
+        playlist.classList.toggle("active");
+
+        if (showList) {
+            playlist.classList.remove("inactive");
+        } else {
+            playlist.classList.add("inactive");
+            setTimeout(() => {
+                playlist.scrollTop = 0;
+            }, 600);
+        }
+    });
 
     audio.addEventListener('ended', nextTrack);
 }

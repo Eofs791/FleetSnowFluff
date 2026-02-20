@@ -7,6 +7,15 @@
     top: calc(100vh / 4);
 }
 
+.info-card > * {
+    opacity: 0;
+    transform: translateY(5%);
+}
+
+section.active:not(.waiting) .info-card > * {
+  animation: slideUpLight 0.5s ease forwards;
+}
+
 .main-title {
     font-family: "WuWa Lahai-Roi";
     font-size: min(5rem, calc(100vw / 8));

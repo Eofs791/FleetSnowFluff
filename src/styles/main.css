@@ -1,6 +1,7 @@
 /* global */
 @import './common/layout.css';
 @import './common/base.css';
+@import './common/animation.css';
 
 /* sections */
 @import './sections/section-base.css';
@@ -13,6 +14,7 @@
 @import './components/header.css';
 @import './components/aside.css';
 @import './components/loader.css';
+@import './components/waline.css';
 
 @font-face {
     font-family: "WuWa Lahai-Roi";

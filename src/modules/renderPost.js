@@ -4,9 +4,10 @@ function renderPostList(posts) {
     const list = document.getElementById("post-list");
     list.innerHTML = '';
 
-    posts.forEach(post => {
+    posts.forEach((post, index) => {
         const item = document.createElement("div");
         item.className = "post-item";
+        item.style.setProperty('--i', index);
 
         const picsHtml = post.category !== 'TEXT' ?
             `<div class="post-images img-count-${post.pics.length}">
@@ -18,7 +19,7 @@ function renderPostList(posts) {
 
         item.innerHTML = `
             <a href="javascript:void(0)" class="card post-card">
-                <p class="post-time">${post.pub_ts} // ${post.category}<p>
+                <p class="post-tag">${post.pub_ts} // ${post.category}<p>
                 <h4 class="post-title">${post.title || ''}</h4>
                 <p class="post-text">${post.text || ''}</p>
             </a>
@@ -41,7 +42,13 @@ function renderPostDetail(post, main) {
             mediaHtml = '';
             break;
         case 'POST':
-            mediaHtml = '';
+            mediaHtml = `
+                <div class="media post-image">
+                    ${post.pics.map(pic =>
+                `<img src="${pic.url}" alt="image">`
+            ).join('')}
+                </div>
+            `;
             break;
         case 'REEL':
             mediaHtml = `
