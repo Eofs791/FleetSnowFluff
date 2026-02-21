@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <title>飞行雪绒 | Fleet SnowFluff</title>
+    <link rel="icon" href="./favicon.ico">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/remixicon@4.9.0/fonts/remixicon.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script type="module" crossorigin src="./assets/index-CAyCI5Xy.js"></script>
+  <link rel="stylesheet" crossorigin href="./assets/index-DRMFc_2d.css">
+</head>
+
+<body>
+    <div id="desktop"></div>
+    <div id="loader">
+        <img src="./images/loading_gif1.png" id="loading-text">
+        <img src="./images/loading_gif2.png" id="loading-seal">
+        <div class="progressbar">
+            <img src="./images/loading_progressbar.png" class="empty">
+            <div id="mask">
+                <img src="./images/loading_progressbar_active.png" class="full">
+            </div>
+
+        </div>
+    </div>
+
+
+    <header>
+        <button class="aside-btn" id="header-btn"><img src="./heart-pixel.png"></button>
+    </header>
+    <aside id="sidebar">
+        <div class="aside-head">
+            <button class="aside-btn"><img src="./heart-pixel.png"></button>
+        </div>
+        <div class="aside-main">
+            <div class="avatar-1">
+                <div class="avatar-2">
+                    <div class="avatar-3"></div>
+                </div>
+                <img src="./images/avatar.gif" class="avatar-gif">
+            </div>
+            <div class="player">
+                <div class="player-head">
+                    <span id="title-text"></span>
+                </div>
+                <div class="control">
+                    <button id="pre-btn"><img src="./images/next.png"></button>
+                    <button id="play-btn"><img src="./images/play.png"></button>
+                    <button id="next-btn"><img src="./images/next.png"></button>
+                </div>
+            </div>
+            <nav>
+                <a href="#info" class="section-btn" style="--i: 1">Info</a>
+                <a href="#work" class="section-btn" style="--i: 2">Work</a>
+                <a href="#post" class="section-btn" style="--i: 3">Post</a>
+                <a href="#chat" class="section-btn" style="--i: 4">Chat Board</a>
+                <a href="javascript:void(0)" id="playlist-btn" style="--i: 5">Playlist</a>
+            </nav>
+            <div class="playlist scroll-area" id="playlist"></div>
+        </div>
+    </aside>
+
+    <section id="info">
+        <div class="info-card">
+            <div class="main-title">
+                <span>FLEET</span><br>
+                <span>SNOWFLUFF</span>
+            </div>
+            <p>欢迎来到星炬学院神秘网络歌手——飞行雪绒的个人发布页！</p>
+
+            <div class="social-icons">
+                <a href="https://www.kurobbs.com/person-center?id=30374418" target="_blank" id="kurobbs"></a>
+                <a href="https://space.bilibili.com/3690972244346976" target="_blank" id="bili"></a>
+                <a href="https://weibo.com/u/9137783544" target="_blank" id="weibo"></a>
+                <a href="https://www.facebook.com/FleetSnowfluffCHT" target="_blank" id="facebook"></a>
+                <a href="https://music.163.com/#/artist?id=122477658" target="_blank" id="netease"></a>
+            </div>
+        </div>
+    </section>
+
+    <section id="work">
+        <div class="head">
+            <span class="subtitle">WORKS</span>
+            <span class="description">作品发布</span>
+        </div>
+        <div class="work-list scroll-area" id="work-list"></div>
+    </section>
+
+    <section id="post">
+        <div class="head">
+            <span class="subtitle">POSTS</span>
+            <span class="description">动态</span>
+        </div>
+        <div class="post-list scroll-area" id="post-list"></div>
+    </section>
+
+    <section id="chat">
+        <div class="head">
+            <span class="subtitle">CHATS</span>
+            <span class="description">留言板</span>
+        </div>
+        <div class="scroll-area" id="waline"></div>
+        </div>
+    </section>
+</body>
+
+</html>
